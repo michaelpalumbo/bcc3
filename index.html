@@ -15,6 +15,18 @@
       <div class="card">
         <div class="card-header">
           <h2>Generate a Password</h2>
+          <h3>Set Password Length</h3>
+          <input type="text" id="pLen" name="pLen" placeholder="8" onkeyup="setLength(this)">
+          <label for="pLen"></label>(8-128)<br>
+          <h3>Select Character Set(s)</h3>
+          <input type="checkbox" name="lowercase" value="0" onclick="setChars(this)" />
+          <label for="lowercase">Lowercase</label><br>
+          <input type="checkbox" name="uppercase" value="1" onclick="setChars(this)" />
+          <label for="uppercase">UPPERCASE</label><br>
+          <input type="checkbox" name="numeric" value="2" onclick="setChars(this)" />
+          <label for="numeric">Numeric (0-9)</label><br>
+          <input type="checkbox" name="special" value="3" onclick="setChars(this)" />
+          <label for="special">Special i.e !@#$ etc.</label><br>
         </div>
         <div class="card-body">
           <textarea

@@ -1,3 +1,5 @@
+// this is just where I experimented with the password generation algorithm 
+
 // valid password characters
 var chars = ['abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', '0123456789', '!"#$%&()*+,-./:;<=>?@[\]^_`{|}~'];
 // given desired pwd length
@@ -16,6 +18,8 @@ function selectCharacter(src){
 
 // given desired length of password, generate password
 function generatePassword(len){
+    // reset the password string
+    pwd = '';
     // loop through password length 
     for(i=0; i<len; i++){
         // choose a random index of the valid character array
